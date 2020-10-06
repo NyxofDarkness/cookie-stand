@@ -29,4 +29,5 @@ MIT Open license. You may use whatever is in here, please acknowledge!
 
 ##### Acknowledgements
 
+Thanks to Paul Chaplin for the blockquote / q rules.[meyerweb](https://meyerweb.com/eric/tools/css/reset/)
 
