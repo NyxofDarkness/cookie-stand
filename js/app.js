@@ -12,6 +12,8 @@ function headerRow() {
   }
   parentElement.appendChild(trElement);
 }
+var cookieLocations = [];
+
 
 function namesColumn() {
   var trElement = document.createElement('tr');
@@ -26,9 +28,6 @@ function namesColumn() {
 namesColumn();
 headerRow();
 
-
-
-var cookieLocations = [];
 
 function salesLocation(name, minimumHourlyCustomers, maximumHourlyCustomers, averageCookiePerCustomer, totalCookiesPerHour, totalCookiesPerDay) {
   this.name = name;
@@ -50,6 +49,7 @@ var Tokyo = new salesLocation('Tokyo', 3, 24, 1.2, hourlyCookies, cookiesDay);
 var Dubai = new salesLocation('Dubai', 11, 38, 3.7, hourlyCookies, cookiesDay);
 var Paris = new salesLocation('Paris', 20, 38, 2.3, hourlyCookies, cookiesDay);
 var Lima = new salesLocation('Lima', 2, 16, 4.6, hourlyCookies, cookiesDay);
+
 
 
 
