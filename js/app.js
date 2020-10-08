@@ -66,6 +66,33 @@ function headerRow() {
   parentElement.appendChild(trElement);
 }
 
+function footerRow() {
+  var totalOfAll = 0;
+  var hourlyTotals = [];
+
+  var trElement = document.createElement('tr');
+
+  for (var i = 0; i < headerArrayHours.length; i++) {
+
+    var hourlyCookieSales = 0;
+
+    for (var j = 0; j < cookieLocations.length; j++) {
+
+      hourlyCookieSales += cookieLocations[j].totalCookiesPerHour[i];
+
+      totalOfAll += cookieLocations[j].totalCookiesPerHour[i];
+    }
+
+    hourlyTotals.push(hourlyCookieSales);
+
+  }
+  for (var k = -1; k < hourlyTotals.length; k++) {
+    var tdElement = document.createElement('td');
+    tdElement.textContent = hourlyTotals[k];
+    trElement.appendChild(tdElement);
+  }
+  parentElement.appendChild(trElement);
+}
 
 headerRow();
 for (var i = 0; i < cookieLocations.length; i++) {
@@ -73,3 +100,5 @@ for (var i = 0; i < cookieLocations.length; i++) {
   cookieLocations[i].render();
 }
 
+
+footerRow();
