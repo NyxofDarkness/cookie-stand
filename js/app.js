@@ -1,9 +1,8 @@
 'use-strict';
 
-
 var parentElement = document.getElementById('sales');
 var cookieLocations = [];
-var headerArrayHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm',];
+var headerArrayHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
 function SalesLocation(name, minimumHourlyCustomers, maximumHourlyCustomers, averageCookiePerCustomer) {
   this.name = name;
@@ -16,7 +15,6 @@ function SalesLocation(name, minimumHourlyCustomers, maximumHourlyCustomers, ave
 
   cookieLocations.push(this);
 };
-
 
 SalesLocation.prototype.generateHourlyCookies = function () {
   for (var i = 0; i < headerArrayHours.length; i++) {
@@ -36,10 +34,10 @@ SalesLocation.prototype.render = function () {
   var tableHeader = document.createElement('th');
   tableHeader.textContent = this.name;
   tableRowElement.appendChild(tableHeader);
-
   for (var i = 0; i < this.totalCookiesPerHour.length; i++) {
     var totalCookiesData = document.createElement('td');
     totalCookiesData.textContent = this.totalCookiesPerHour[i];
+
     tableRowElement.appendChild(totalCookiesData);
   }
 
@@ -52,6 +50,7 @@ new SalesLocation('Dubai', 11, 38, 3.7);
 new SalesLocation('Paris', 20, 38, 2.3);
 new SalesLocation('Lima', 2, 16, 4.6);
 
+
 function generateRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
@@ -59,7 +58,7 @@ function generateRandomNumber(min, max) {
 function headerRow() {
 
   var trElement = document.createElement('tr');
-  for (var i = 0; i < headerArrayHours.length; i++) {
+  for (var i = -1; i < headerArrayHours.length; i++) {
     var thElement = document.createElement('th');
     thElement.textContent = headerArrayHours[i];
     trElement.appendChild(thElement);
@@ -68,10 +67,9 @@ function headerRow() {
 }
 
 
-
 headerRow();
-
 for (var i = 0; i < cookieLocations.length; i++) {
   cookieLocations[i].generateHourlyCookies();
   cookieLocations[i].render();
 }
+
