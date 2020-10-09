@@ -1,0 +1,38 @@
+header {
+  font-size: 40px;
+  padding: 30px;
+}
+body {
+  background-image: url('/assets/watercolour-watercolor-paint-1631426.jpg'); 
+ background-repeat: no-repeat;
+ background-attachment: scroll;
+ background-size: cover;
+ font-family: 'Inder', sans-serif; line-height: 28px; margin-bottom: 15px; color:salmon; 
+color: rgb(80, 43, 38);
+font-size: x-large;
+font-style: italic;
+} 
+
+ table, th, td{
+   empty-cells: show;
+   border: 1px solid green;
+   width: 200px;
+   height: 20px;
+   padding:10px;
+   vertical-align: middle;
+   margin-left: 30px;
+ }
+ tr:hover {background-color: salmon;}
+ tr {
+   width: 100px;
+   text-align: center;
+ }
+ 
+h2 {
+  font-size: 40px;
+  padding: 30px;
+}
+button {
+  margin: 30px;
+}
+
