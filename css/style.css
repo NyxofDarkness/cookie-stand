@@ -1,0 +1,88 @@
+
+ body {
+   background-image: url('/assets/watercolour-watercolor-paint-1631426.jpg'); 
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  font-family: 'Inder', sans-serif; line-height: 28px; margin-bottom: 15px; color:salmon; 
+color: rgb(80, 43, 38);
+font-size: x-large;
+font-style: italic;
+} 
+
+#tops {
+  /* background-color: rgba(5, 104, 5, 0.329); */
+}
+
+/* * {box-sizing: border-box;} */
+#salmon {
+width: 400px;
+}
+
+.container {
+  position: relative;
+  align-content: center;
+  width: 50%;
+  max-width: 300px;
+  margin-left: 35%;
+}
+
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 400px;
+  transition: 1s ease;
+  opacity:0;
+  align-items: center;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+  align-items: center;
+}
+
+p { 
+max-width: 800px;
+max-height: 800px;
+}
+
+.introducebusiness {
+  margin-top: 30px;
+ display: flex;
+ flex-direction: row;
+}
+
+
+
+h1 {
+  color: salmon; font-family: "Great Vibes", cursive; font-size: 100px; line-height: 160px; font-weight: normal; margin-bottom: 0px; margin-top: 40px; text-align: center; text-shadow: 0 1px 1px #fff;
+  padding: 30px;
+}
+#cookie {
+  margin-top: 25%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.introduce {
+  border:solid lightcoral;
+  text-align: center;
+  margin-left: 100px;
+  margin: 30px;
+  padding-left: 30px;
+}
+#cookietreats {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+#foot {
+  text-align: left;
+  list-style: inside;
+}
+
+button {
+  float: right;
+}

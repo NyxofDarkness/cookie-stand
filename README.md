@@ -31,3 +31,8 @@ MIT Open license. You may use whatever is in here, please acknowledge!
 
 Thanks to Paul Chaplin for the blockquote / q rules.[meyerweb](https://meyerweb.com/eric/tools/css/reset/)
 
+Thanks to w3schools for all the help! [W3Schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_title)
+[w3schools](https://www.w3schools.com/howto/howto_css_image_overlay_title.asp
+
+)
+
