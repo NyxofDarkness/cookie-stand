@@ -5,6 +5,7 @@ var parentElement = document.getElementById('sales');
 var cookieLocations = [];
 var headerArrayHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm',];
 
+
 function SalesLocation(name, minimumHourlyCustomers, maximumHourlyCustomers, averageCookiePerCustomer) {
   this.name = name;
   this.min = minimumHourlyCustomers;
@@ -52,6 +53,32 @@ new SalesLocation('Dubai', 11, 38, 3.7);
 new SalesLocation('Paris', 20, 38, 2.3);
 new SalesLocation('Lima', 2, 16, 4.6);
 
+var storeForm = document.getElementById('form');
+var newStoreLocationArray = [];
+
+function storeLocationsForm(newStore, min, max, average) {
+  this.newStore = newStore;
+  this.min = min;
+  this.max = max;
+  this.average = average;
+
+  newStoreLocationArray.push(this);
+}
+
+function handleSubmit(Event) {
+  Event.preventDefault();
+
+  console.log('this is my event.target.newStore.value', Event.target.newStore.value);
+  var newStore = Event.target.newStore.value;
+  var min = Event.target.min.value;
+  var max = Event.target.max.value;
+  var average = Event.target.average.value;
+
+  new SalesLocation(newStore, min, max, average);
+}
+
+// storeLocationsForm.addEventlistener('submit', handleSubmit);
+
 function generateRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
@@ -75,3 +102,4 @@ for (var i = 0; i < cookieLocations.length; i++) {
   cookieLocations[i].generateHourlyCookies();
   cookieLocations[i].render();
 }
+
