@@ -2,107 +2,56 @@
 <html>
 
 <head>
-  <title>Pat's Salmon Cookies Sales</title>
-  <link href='css/reset.css' rel='stylesheet' type='text/css' />
-  <link href='css/style2.css' rel='stylesheet' type='text/css' />
+  <title>Cookie Sales</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/style2.css" />
 </head>
 
 <body>
-  <header>Pat's Salmon Cookies Sales</header>
+
+
+  <form id="addNewStore">
+    <fieldset>
+      <legend>Add a New Store</legend>
+
+      <label for="storeName">Store Name: </label>
+      <input type="text" name="storeName" required="required">
+
+      <label for="minCust">Minimum Customers: </label>
+      <input type="number" name="minCust" required="required">
+
+      <label for="maxCust"> Maximum Customers: </label>
+      <input type="number" name="maxCust" required="required">
+
+      <label for="avgCookies">Average Cookies Per Sale: </label>
+      <input type="text" name="avgCookies" required="required">
+
+      <button>Add Store</button>
+    </fieldset>
+  </form>
+  <h2>Hourly Cookie Sales By Location</h2>
+
   <main>
-<<<<<<< HEAD
-    <form>
-      <fieldset>
-        <label>Enter New Store
-          <input newStore="newStore" type='text' />
-        </label>
-        <label>Minimum Customer Count
-          <input name='min' type='number' />
-        </label>
-        <label>Maximum Customer Count
-          <input name='max' type='number' />
-        </label>
-        <label>Average Cookies Per Customer
-          <input name='average' type='number' />
-        </label>
-      </fieldset>
-
-      <input type="submit" />
-    </form>
-=======
-    <button>
-      <li><a href="index.html">Home</a></li>
-    </button>
->>>>>>> ed1f8552e1ee451796bb849c8195b529f9a4f7b4
-    <!-- <section id="seattle">
-      <ul id="seattle-sales"></ul>
-    </section>
-    <section id="tokyo">
-      <ul id="tokyo-sales"></ul>
-    </section>
-    <section id="dubai">
-      <ul id="dubai-sales"></ul>
-    </section>
-    <section id="paris">
-      <ul id="paris-sales"></ul>
-    </section>
-    <section id="lima">
-      <ul id="lima-sales"></ul>
-    </section> -->
     <table>
+      <thead>
+
+      </thead>
+
       <tbody>
-        <tr>
-          <th>name</th>
-          <th>minimumHour</th>
-          <th>maximumHour</th>
-          <th>AverageCookiePerSale</th>
-        </tr>
-
-        <tr>
-          <td>Seattle</td>
-          <td>23</td>
-          <td>65</td>
-          <td>6.3</td>
-        </tr>
-
-        <tr>
-          <td>Tokyo</td>
-          <td>3</td>
-          <td>24</td>
-          <td>1.2</td>
-        </tr>
-
-        <tr>
-          <td>Dubai</td>
-          <td>11</td>
-          <td>38</td>
-          <td>3.7</td>
-        </tr>
-
-        <tr>
-          <td>Paris</td>
-          <td>20</td>
-          <td>38</td>
-          <td>2.3</td>
-        </tr>
-
-        <tr>
-          <td>Lima</td>
-          <td>2</td>
-          <td>16</td>
-          <td>4.6</td>
-        </tr>
 
       </tbody>
-    </table>
 
-    <h2>Cookie Sales Table-last row totals</h2>
-    <table>
-      <tbody id="sales"></tbody>
+      <tfoot>
+
+      </tfoot>
     </table>
   </main>
-  <Footer></Footer>
-  <script src='js/app.js'></script>
+  <footer>
+    <button>
+      <li><a href="index.html">Click here for HOMEPAGE!</a></li>
+    </button>
+    <script src="js/app.js">
+    </script>
 </body>
 
 </html>
