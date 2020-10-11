@@ -1,6 +1,6 @@
 'use strict';
 
-var times = ['6AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM', '8PM'
+var hours = ['6AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM', '8PM'
 ];
 
 //variables to be used later to make sales table thing
@@ -11,7 +11,7 @@ var addNewStore = document.getElementById('addNewStore');
 
 //fill an array with 0s to be equal in length to array of times-so this is what it does! Is it like place holders? and as the function runs the zeros are replaced?
 var hourlyTotals = [];
-for (var i = 0; i < times.length; i++) {
+for (var i = 0; i < hours.length; i++) {
   hourlyTotals[i] = 0;
 }
 
@@ -34,7 +34,7 @@ Store.prototype.customers = function () {
 
 
 Store.prototype.cookies = function () {
-  for (var i = 0; i < times.length; i++) {
+  for (var i = 0; i < hours.length; i++) {
     this.hourlySales[i] = Math.floor(this.customers() * this.avgCookies);
   }
 };
@@ -76,8 +76,8 @@ function createHeader() {
   newRow = addElement('tr', '', head);
   addElement('th', '', newRow);
 
-  for (var i = 0; i < times.length; i++) {
-    addElement('th', times[i], newRow);
+  for (var i = 0; i < hours.length; i++) {
+    addElement('th', hours[i], newRow);
   }
 
   addElement('th', 'Total', newRow);
@@ -92,9 +92,9 @@ function renderBody() {
 function createFooter() {
   var foot = document.querySelector('tfoot');
   foot.innerHTML = '';
-  newRow = addElement('tr', '', foot);
+  newRow = addElement('tr', ' ', foot);
   addElement('th', 'Totals', newRow);
-  for (var i = 0; i < times.length; i++) {
+  for (var i = 0; i < hours.length; i++) {
     var hourTotal = 0;
     for (var j = 0; j < Store.stores.length; j++) {
       hourTotal += Store.stores[j].hourlySales[i];
@@ -104,12 +104,12 @@ function createFooter() {
 }
 
 
-function addStore(e) {
-  e.preventDefault();
-  var minCust = parseInt(e.target.minCust.value);
-  var maxCust = parseInt(e.target.maxCust.value);
-  var avgCookies = parseFloat(e.target.avgCookies.value);
-  var storeName = e.target.storeName.value;
+function addStore(newStore) {
+  newStore.preventDefault();
+  var minCust = parseInt(newStore.target.minCust.value);
+  var maxCust = parseInt(newStore.target.maxCust.value);
+  var avgCookies = parseFloat(newStore.target.avgCookies.value);
+  var storeName = newStore.target.storeName.value;
 
   new Store(storeName, minCust, maxCust, avgCookies,);
 
